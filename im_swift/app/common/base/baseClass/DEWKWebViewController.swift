@@ -11,10 +11,10 @@ import WebKit
 
 class DEWKWebViewController: DEBaseController {
    
-    var url : String =  LanguageHelper.localizedString(key: FEATURE_HOME_MENU_HELP_LINK)
+    var url : String
     var webView : WKWebView?
     var titleString : String = ""
-    lazy  var progressView = UIProgressView.init(frame: CGRect.init(x: 0, y: 1, width: SCREEN_WIDTH, height: 1))
+//    lazy  var progressView = UIProgressView.init(frame: CGRect.init(x: 0, y: 1, width: SCREEN_WIDTH, height: 1))
    
 
     override func viewDidLoad() {
@@ -50,10 +50,7 @@ class DEWKWebViewController: DEBaseController {
     
     
     func creatProgressView() {
-        self.progressView.backgroundColor = contentTextWhiteColor()
-        self.progressView.progressViewStyle = .default
-        self.progressView.trackTintColor = textWhiteColor()
-        self.progressView.progressTintColor = darkGreenColor()
+
         self.webView?.addSubview(self.progressView)
         
     }
@@ -82,20 +79,7 @@ class DEWKWebViewController: DEBaseController {
     }
     
     func getUserInfo() {
-          let mut = NSMutableDictionary()
-          let lan = UserDefaults.standard.object(forKey: "appLanguage") as? String ?? "en"
-          let token = UserDefaults.standard.object(forKey: APPTOKEN) as? String ?? ""
-          let auth = "Bearer " + token
-          let version = majorVersion as? String ?? ""
-          let host = BASE_URL
-          let platform = "ios"
-          mut.addEntries(from: ["Accept-Language" : lan])
-          mut.addEntries(from: ["Authorization" : auth])
-          mut.addEntries(from: ["Client-Version" : version])
-          mut.addEntries(from: ["Client-Platform" : platform])
-          mut.addEntries(from: ["Host" : host])
-          let str = mut.convertToString()
-          JSCallBack(jscode: "getUserInfo(\(str))")
+
           
       }
       

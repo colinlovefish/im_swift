@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DEBaseNavigationController: UINavigationController ,UINavigationBarDelegate{
+class DEBaseNavigationController: UINavigationController ,UINavigationBarDelegate, UIGestureRecognizerDelegate{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.backgroundColor = getNavigationBarBackgroundColor()
+//        self.navigationController?.navigationBar.backgroundColor = getNavigationBarBackgroundColor()
         self.interactivePopGestureRecognizer?.delegate = self
         self.navigationController?.interactivePopGestureRecognizer!.isEnabled = true
         

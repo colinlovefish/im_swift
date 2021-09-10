@@ -9,7 +9,7 @@
 import Foundation
 import Moya
 import Alamofire
-import SwiftyJSON
+//import SwiftyJSON
 import JGProgressHUD
 
 // timeout
@@ -26,19 +26,19 @@ typealias errorCallback = (() -> (Void))
 
 private let myEndpointClosure = {(target: API) -> Endpoint in
     var url = target.baseURL.absoluteString + target.path
-    let isDemo = UserDefaults.standard.bool(forKey: DEMO_STATUS_KEY)
-    let isDebug = UserDefaults.standard.bool(forKey: DEBUGMODEL_KEY)
+//    let isDemo = UserDefaults.standard.bool(forKey: DEMO_STATUS_KEY)
+//    let isDebug = UserDefaults.standard.bool(forKey: DEBUGMODEL_KEY)
     
-    if isDebug == true {
-        url = target.debugURL.absoluteString + target.path
-        if isDemo == true {
-            url = target.debugDemoURL.absoluteString + target.path
-        }
-    }else {
-        if isDemo == true {
-            url = target.demoURL.absoluteString + target.path
-        }
-    }
+//    if isDebug == true {
+//        url = target.debugURL.absoluteString + target.path
+//        if isDemo == true {
+//            url = target.debugDemoURL.absoluteString + target.path
+//        }
+//    }else {
+//        if isDemo == true {
+//            url = target.demoURL.absoluteString + target.path
+//        }
+//    }
     
     var task = target.task
     var endpoint = Endpoint(

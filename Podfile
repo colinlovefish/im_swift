@@ -33,6 +33,7 @@ pod 'JXPhotoBrowser'
 pod 'Cache'
 pod 'ReusableKit'
 pod 'ReusableKit/RxSwift'
+pod 'SQLite.swift'
 
 
 
