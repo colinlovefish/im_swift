@@ -100,28 +100,28 @@ extension DownLoader : URLSessionDataDelegate {
     
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?){
         
-        let path = Bundle.main.path(forResource: "delocalizable", ofType: "bundle")
-        print("bundle:" + path!)
-        SSZipArchive.unzipFile(atPath: self.downLoadingPath!, toDestination: kTempPath)
-        let bundlePath = kTempPath + "delocalizable.bundle"
-        
-        FileTool.removeFile(self.downLoadedPath!)
-        FileTool.moveFile(bundlePath, self.downLoadedPath!)
-
-        
-        if (error == nil) {
-            
-            // 不一定是成功
-            // 数据是肯定可以请求完毕
-            // 判断, 本地缓存 == 文件总大小 {filename: filesize: md5:xxx}
-            // 如果等于 => 验证, 是否文件完整(file md5 )
-           
-        }else {
-            print("有问题")
-        }
-      
-        self.outputStream?.close()
-        
+//        let path = Bundle.main.path(forResource: "delocalizable", ofType: "bundle")
+//        print("bundle:" + path!)
+//        SSZipArchive.unzipFile(atPath: self.downLoadingPath!, toDestination: kTempPath)
+//        let bundlePath = kTempPath + "delocalizable.bundle"
+//        
+//        FileTool.removeFile(self.downLoadedPath!)
+//        FileTool.moveFile(bundlePath, self.downLoadedPath!)
+//
+//        
+//        if (error == nil) {
+//            
+//            // 不一定是成功
+//            // 数据是肯定可以请求完毕
+//            // 判断, 本地缓存 == 文件总大小 {filename: filesize: md5:xxx}
+//            // 如果等于 => 验证, 是否文件完整(file md5 )
+//           
+//        }else {
+//            print("有问题")
+//        }
+//      
+//        self.outputStream?.close()
+//        
     }
   
 }

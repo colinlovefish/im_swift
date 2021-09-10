@@ -11,7 +11,7 @@ import WebKit
 
 class DEWKWebViewController: DEBaseController {
    
-    var url : String
+    var url : String = ""
     var webView : WKWebView?
     var titleString : String = ""
 //    lazy  var progressView = UIProgressView.init(frame: CGRect.init(x: 0, y: 1, width: SCREEN_WIDTH, height: 1))
@@ -51,7 +51,7 @@ class DEWKWebViewController: DEBaseController {
     
     func creatProgressView() {
 
-        self.webView?.addSubview(self.progressView)
+        
         
     }
     
@@ -60,16 +60,7 @@ class DEWKWebViewController: DEBaseController {
         if keyPath == "title" {
             self.title = self.webView?.title ?? ""
         }else if keyPath == "estimatedProgress"{
-            self.progressView.alpha = 1.0
-            progressView.setProgress(Float(self.webView?.estimatedProgress ?? 0), animated: true)
-            if (self.webView?.estimatedProgress ?? 0.0) >= 1.0{
-                UIView.animate(withDuration: 0.3, delay: 0.1, options: .curveEaseOut, animations: {
-                    self.progressView.alpha = 0
-                }) { (finish) in
-                    self.progressView.setProgress(0.0, animated: false)
-                }
-            }
-            
+           
         }
     }
 

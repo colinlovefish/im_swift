@@ -22,7 +22,7 @@ class DEAlertConfirmButton: UIButton {
     func setupUI()  {
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         self.setTitleColor(TEXT_BLUE, for: .normal)
-        self.setTitle(LanguageHelper.localizedString(key: EXTENSIONS_MESSAGE_BOX_OK), for: .normal)
+        
     }
 
     /*

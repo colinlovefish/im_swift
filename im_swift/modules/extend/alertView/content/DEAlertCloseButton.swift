@@ -23,7 +23,7 @@ class DEAlertCloseButton: UIButton {
         self.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         self.setTitleColor(textWhiteColor(), for: .normal)
         
-        self.setTitle(LanguageHelper.localizedString(key: UI_EXTENSIONS_MESSAGE_BOX_CANCEL), for: .normal)
+        
     }
 
     /*

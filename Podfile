@@ -34,7 +34,7 @@ pod 'Cache'
 pod 'ReusableKit'
 pod 'ReusableKit/RxSwift'
 pod 'SQLite.swift'
-
+pod 'SwiftyJSON'
 
 
 end

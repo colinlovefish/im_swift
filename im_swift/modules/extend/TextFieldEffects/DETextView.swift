@@ -25,7 +25,7 @@ class DETextView: UIView {
     func drawUI() {
         self.backgroundColor = darkBlueColor()
         let tf = HoshiTextField(frame: CGRect.init(x: CGFloat(30.0), y: 0, width: SCREEN_WIDTH - 60, height: TF_HEIGHT))
-        let etext = LanguageHelper.localizedString(key: FEATURE_KYC_FIELD_REGION_PLACEHOLDER)
+        let etext = ""
         tf.placeholderColor = textWhiteColor()
         tf.textColor = contentTextWhiteColor()
         tf.returnKeyType = .done

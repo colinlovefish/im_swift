@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 let isOpenLightMode : Bool = true
 
@@ -80,12 +81,12 @@ func darkRedColor() -> UIColor {
 
 func darkRedAlphaColor(alpha: CGFloat) -> UIColor {
     if isOpenLightMode == false {
-        return Color(hex: "#E8382F", alpha: alpha)!
+        return UIColor.init(hex: "#E8382F", alpha: alpha)!
     }
     if getDisplayMode() == .modeStatusLight {
-        return Color(hex: "#DE543E", alpha: alpha)!
+        return UIColor.init(hex: "#DE543E", alpha: alpha)!
     } else {
-        return Color(hex: "#E8382F", alpha: alpha)!
+        return UIColor.init(hex: "#E8382F", alpha: alpha)!
     }
 }
 

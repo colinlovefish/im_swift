@@ -10,6 +10,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 import ReusableKit
+import SnapKit
 
 
 class DEBaseView: UIView,DEBaseViewProtocol {

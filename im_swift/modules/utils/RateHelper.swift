@@ -39,9 +39,5 @@ class RateHelper: NSObject {
     }
     
     
-    //计算杠杆率
-   class func getLeveragePriceInfo(item : DEOrderItem) -> Double {
-       let info = Double(item.start_price ?? 0) / Double(item.start_margin_value ?? 1) / Double(item.hand_count ?? 1) / (Double(item.hand_coin ?? 1) / (1e+10)) * 100.0
-        return info
-    }
+  
 }
