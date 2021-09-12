@@ -11,6 +11,13 @@ class CTChatsController: DEBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let label=UILabel();
+        label.text="chat"
+        self.view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.center.equalTo(self.view)
+        }
 
         // Do any additional setup after loading the view.
     }

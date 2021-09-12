@@ -12,6 +12,12 @@ class CTMeController: DEBaseController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let label=UILabel();
+        label.text="me"
+        self.view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.center.equalTo(self.view)
+        }
         // Do any additional setup after loading the view.
     }
     

@@ -229,51 +229,47 @@ func textWhiteColor() -> UIColor {
 
 
 //获取首页tabbar图标
-func getTabbarHome() -> String {
+func getTabbarChat() -> String {
     if isOpenLightMode == false {
-        return "_home"
+        return "tab_chat"
     }
     if getDisplayMode() == .modeStatusLight {
-//        return "light_mode_home"
-        return "_home"
+        return "tab_chat"
     } else {
-        return "_home"
+        return "tab_chat"
     }
 }
 
-func getTabbarExchage() -> String {
+func getTabbarContact() -> String {
     if isOpenLightMode == false {
-        return "_exchange"
+        return "tab_contact"
     }
     if getDisplayMode() == .modeStatusLight {
-//        return "light_mode_exchange"
-        return "_exchange"
+        return "tab_contact"
     } else {
-        return "_exchange"
+        return "tab_contact"
     }
 }
 
-func getTabbarMini() -> String {
+func getTabbarDiscover() -> String {
     if isOpenLightMode == false {
-        return "_mini"
+        return "tab_discover"
     }
     if getDisplayMode() == .modeStatusLight {
-//        return "light_mode_mini"
-        return "_mini"
+        return "tab_discover"
     } else {
-        return "_mini"
+        return "tab_discover"
     }
 }
 
-func getTabbarOtc() -> String {
+func getTabbarMe() -> String {
     if isOpenLightMode == false {
-        return "_perpetual"
+        return "tab_user"
     }
     if getDisplayMode() == .modeStatusLight {
-//        return "light_mode_perpetual"
-        return "_perpetual"
+        return "tab_user"
     } else {
-        return "_perpetual"
+        return "tab_user"
     }
 }
 

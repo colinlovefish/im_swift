@@ -21,30 +21,23 @@ class CTTabBarViewController: UITabBarController {
         let discover = CTDiscoverController()
         let me = CTMeController()
         
-        let chatsNavi = naviViewController(childerVC: chats, title: "", normalImg: getTabbarHome(), selectedImg: "_home_selected")
+        let chatsNavi = naviViewController(childerVC: chats, title: "聊天", normalImg: getTabbarChat(), selectedImg: "tab_chat_select")
         
         
-//        exchangePage.leftBarHidden(isHidden: true)
-        let contactsNavi = naviViewController(childerVC: contacts, title: "", normalImg: getTabbarExchage(), selectedImg: "_exchange_selected")
+        let contactsNavi = naviViewController(childerVC: contacts, title: "通讯录", normalImg: getTabbarContact(), selectedImg: "tab_contact_selected")
         
         
-        
-    
-        let discoverNavi = naviViewController(childerVC: discover, title: "", normalImg: getTabbarMini(), selectedImg: "_mini_selected")
+        let discoverNavi = naviViewController(childerVC: discover, title: "发现", normalImg: getTabbarDiscover(), selectedImg: "tab_discover_selected")
         
         
-        
-        
-        let meNavi = naviViewController(childerVC: me, title: "", normalImg: getTabbarOtc(), selectedImg: "_perpetual_selected")
+        let meNavi = naviViewController(childerVC: me, title: "我", normalImg: getTabbarMe(), selectedImg: "tab_user_selected")
         
         
         
-        
-    
         self.configureList.add(chatsNavi)
         self.configureList.add(contactsNavi)
         self.configureList.add(discoverNavi)
-        self.configureList.add(me)
+        self.configureList.add(meNavi)
         
         self.viewControllers = self.configureList as? [UIViewController]
     }
